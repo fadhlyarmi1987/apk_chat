@@ -1,0 +1,1 @@
+/Applications/development/18 Juni/magang3/android/app/src/main/kotlin/com/example/magang3/MainActivity.kt

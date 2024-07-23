@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "775804210080",
+    "project_id": "magang3-fe3d2",
+    "storage_bucket": "magang3-fe3d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775804210080:android:84dcfe6d04666215e632c5",
+        "android_client_info": {
+          "package_name": "com.example.magang3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDEC2I4r9tS_XMEFkbzlm1CvAi_WMXAiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
