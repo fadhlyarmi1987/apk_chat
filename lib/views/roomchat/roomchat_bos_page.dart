@@ -79,7 +79,7 @@ class RoomChatBosPage extends StatelessWidget {
                                 Navigator.pop(context);
                               },
                               icon: Icon(Icons.reply),
-                              label: Text('Balas'),
+                              label: Text('Back'),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
                               ),

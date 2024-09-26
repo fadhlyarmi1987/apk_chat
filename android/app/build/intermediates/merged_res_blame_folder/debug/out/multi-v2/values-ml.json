@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.magang3.app-mergeDebugResources-3:/values-ml/values-ml.xml",
+            "outputFile": "com.example.magang3.app-mergeDebugResources-4:/values-ml/values-ml.xml",
             "map": [
                 {
-                    "source": "/Users/mac/.gradle/caches/transforms-3/ba074544466dc6d58c67266193c2a1eb/transformed/jetified-credentials-1.2.0-rc01/res/values-ml/values-ml.xml",
+                    "source": "/Users/mac/.gradle/caches/transforms-3/fac84cd5ecf1ec88a8c98571217c9350/transformed/core-1.13.1/res/values-ml/values-ml.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,157,260,362,466,569,670,792",
+                        "endColumns": "101,102,101,103,102,100,121,100",
+                        "endOffsets": "152,255,357,461,564,665,787,888"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10,33",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "282,384,487,589,693,796,897,3807",
+                        "endColumns": "101,102,101,103,102,100,121,100",
+                        "endOffsets": "379,482,584,688,791,892,1014,3903"
+                    }
+                },
+                {
+                    "source": "/Users/mac/.gradle/caches/transforms-3/fa6bede6d23f621cda068d46314ffe31/transformed/jetified-credentials-1.2.0-rc01/res/values-ml/values-ml.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,41 +31,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mac/.gradle/caches/transforms-3/cd029caa73742c9274e432966ee47c8f/transformed/core-1.9.0/res/values-ml/values-ml.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "26",
-                        "startColumns": "4",
-                        "startOffsets": "3070",
-                        "endColumns": "100",
-                        "endOffsets": "3166"
-                    }
-                },
-                {
-                    "source": "/Users/mac/.gradle/caches/transforms-3/9e21393e56dad810e6acf757fb1eb53d/transformed/browser-1.4.0/res/values-ml/values-ml.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,164,267,378",
-                        "endColumns": "108,102,110,103",
-                        "endOffsets": "159,262,373,477"
-                    },
-                    "to": {
-                        "startLines": "22,23,24,25",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "2643,2752,2855,2966",
-                        "endColumns": "108,102,110,103",
-                        "endOffsets": "2747,2850,2961,3065"
-                    }
-                },
-                {
-                    "source": "/Users/mac/.gradle/caches/transforms-3/3b2d428fede6c5e3dd9018d5c02cc047/transformed/jetified-play-services-base-18.0.1/res/values-ml/values.xml",
+                    "source": "/Users/mac/.gradle/caches/transforms-3/14b322704d4e2bf3df95bc180f2fad1b/transformed/jetified-play-services-base-18.0.1/res/values-ml/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -57,15 +40,15 @@
                         "endOffsets": "307,482,617,734,894,1015,1116,1218,1396,1508,1678,1810,1955,2112,2172,2237,2325"
                     },
                     "to": {
-                        "startLines": "4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21",
+                        "startLines": "11,12,13,14,15,16,17,18,20,21,22,23,24,25,26,27,28",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "282,401,580,719,840,1004,1129,1234,1500,1682,1798,1972,2108,2257,2418,2482,2551",
+                        "startOffsets": "1019,1138,1317,1456,1577,1741,1866,1971,2237,2419,2535,2709,2845,2994,3155,3219,3288",
                         "endColumns": "118,178,138,120,163,124,104,105,181,115,173,135,148,160,63,68,91",
-                        "endOffsets": "396,575,714,835,999,1124,1229,1335,1677,1793,1967,2103,2252,2413,2477,2546,2638"
+                        "endOffsets": "1133,1312,1451,1572,1736,1861,1966,2072,2414,2530,2704,2840,2989,3150,3214,3283,3375"
                     }
                 },
                 {
-                    "source": "/Users/mac/.gradle/caches/transforms-3/a43f60338762a20514d953a92576aa3e/transformed/jetified-play-services-basement-18.3.0/res/values-ml/values.xml",
+                    "source": "/Users/mac/.gradle/caches/transforms-3/7b4881d0d08dada2f4df61a6dcb57279/transformed/jetified-play-services-basement-18.3.0/res/values-ml/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -74,11 +57,28 @@
                         "endOffsets": "350"
                     },
                     "to": {
-                        "startLines": "12",
+                        "startLines": "19",
                         "startColumns": "4",
-                        "startOffsets": "1340",
+                        "startOffsets": "2077",
                         "endColumns": "159",
-                        "endOffsets": "1495"
+                        "endOffsets": "2232"
+                    }
+                },
+                {
+                    "source": "/Users/mac/.gradle/caches/transforms-3/32cea98340e1fb2b9fa61add8980a4ff/transformed/browser-1.4.0/res/values-ml/values-ml.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,164,267,378",
+                        "endColumns": "108,102,110,103",
+                        "endOffsets": "159,262,373,477"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3380,3489,3592,3703",
+                        "endColumns": "108,102,110,103",
+                        "endOffsets": "3484,3587,3698,3802"
                     }
                 }
             ]
