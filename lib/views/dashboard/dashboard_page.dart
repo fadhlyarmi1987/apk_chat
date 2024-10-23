@@ -36,15 +36,14 @@ class DashboardPage extends StatelessWidget {
                       title: Text('User'),
                       onTap: () {
                         Navigator.pop(context);
-                        // Navigasi ke halaman detail pengguna
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => UserDetailPage(
-                              name: userName, // Kirim nama pengguna yang sedang login
-                              email: email, // Kirim email yang benar
-                              division: division, // Kirim divisi yang benar
-                              profilePictureUrl: '', // Kirim URL foto profil jika diperlukan
+                              name: userName,
+                              email: email,
+                              division: division,
+                              profilePictureUrl: '',
                             ),
                           ),
                         );
@@ -73,7 +72,7 @@ class DashboardPage extends StatelessWidget {
                         Navigator.pushNamedAndRemoveUntil(
                           context,
                           '/login',
-                          (route) => false
+                          (route) => false,
                         );
                       },
                     ),
@@ -83,8 +82,26 @@ class DashboardPage extends StatelessWidget {
             ),
           ),
         );
-      }
+      },
     );
+  }
+
+  Future<double> _getAverageRating(String email) async {
+    QuerySnapshot ratingSnapshot = await FirebaseFirestore.instance
+        .collection('ratings')
+        .where('to', isEqualTo: email)
+        .get();
+
+    if (ratingSnapshot.docs.isEmpty) {
+      return 0.0;
+    }
+
+    double totalRating = 0.0;
+    for (var doc in ratingSnapshot.docs) {
+      totalRating += doc['rating'];
+    }
+
+    return totalRating / ratingSnapshot.docs.length;
   }
 
   @override
@@ -94,7 +111,7 @@ class DashboardPage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 20, 131, 234),
         title: Text(
           '$userName',
-          style: TextStyle(color: Colors.white), // Warna teks menjadi putih
+          style: TextStyle(color: Colors.white),
         ),
         leading: IconButton(
           icon: Icon(Icons.menu, color: Colors.white),
@@ -104,10 +121,9 @@ class DashboardPage extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 20, 131, 234),
       body: Column(
         children: [
-          // Garis di bawah AppBar
           Container(
             height: 1.0,
-            color: const Color.fromARGB(255, 255, 255, 255), // Warna garis
+            color: const Color.fromARGB(255, 255, 255, 255),
             margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
           ),
           Expanded(
@@ -122,71 +138,114 @@ class DashboardPage extends StatelessWidget {
                 }
                 if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
                   return Center(child: Text('No data available'));
+                }
+
+                final docs = snapshot.data!.docs;
+
+                return RefreshIndicator(
+                  onRefresh: () async {
+                    for (var doc in docs) {
+                      var email = doc.id; // Ambil email dari dokumen ID
+                      // Memanggil fungsi untuk menghitung rating
+                      await _getAverageRating(email);
                     }
+                  },
+                  child: ListView.builder(
+                    padding: EdgeInsets.fromLTRB(4, 20, 4, 10),
+                    itemCount: docs.length,
+                    itemBuilder: (context, index) {
+                      var data = docs[index].data() as Map<String, dynamic>;
+                      var email = docs[index].id; // Ambil email dari dokumen ID
 
-                    final docs = snapshot.data!.docs;
+                      return FutureBuilder<double>(
+                        future: _getAverageRating(email),
+                        builder: (context, ratingSnapshot) {
+                          String ratingDisplay = '';
+                          if (ratingSnapshot.connectionState == ConnectionState.waiting) {
+                            ratingDisplay = 'Loading...';
+                          } else if (ratingSnapshot.hasError) {
+                            ratingDisplay = 'Error';
+                          } else {
+                            ratingDisplay = ratingSnapshot.data!.toStringAsFixed(1);
+                          }
 
-                    return ListView.builder(
-                  padding: EdgeInsets.fromLTRB(4, 20, 4, 10),
-                      itemCount: docs.length,
-                      itemBuilder: (context, index) {
-                    var data = docs[index].data() as Map<String, dynamic>;
-                    var email = docs[index].id; // Ambil email dari dokumen ID
-                    return GestureDetector(
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                            builder: (context) => RoomChatPage(
-                              name: data['name'] ?? 'No Name',
+                                  builder: (context) => RoomChatPage(
+                                    name: data['name'] ?? 'No Name',
                                     email: email,
                                     userName: userName,
-                             ),
+                                  ),
                                 ),
                               );
                             },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.3),
-                              spreadRadius: -8,
-                              blurRadius: 6,
-                              offset: Offset(0, 6),
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        height: 70.0, // Atur tinggi Card 
-                        child: Card(
-                          color: Color.fromARGB(255, 147, 172, 236),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          margin: EdgeInsets.symmetric(vertical: 6.0, horizontal: 8.0),
-                            child: Center(
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 50.0), // Atur jarak kiri sesuai kebutuhan
-                                    child: Text(
-                                      data['name'] ?? 'No Name',
-                                      
-                                      style: GoogleFonts.khmer(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.normal,
-                                        color: Colors.white,
-                                      ),
-                                      
-                                    ),
-                                    ),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.3),
+                                    spreadRadius: -8,
+                                    blurRadius: 6,
+                                    offset: Offset(0, 6),
+                                  ),
                                 ],
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              height: 70.0,
+                              child: Card(
+                                color: Color.fromARGB(255, 147, 172, 236),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                margin: EdgeInsets.symmetric(vertical: 6.0, horizontal: 8.0),
+                                child: Center(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 50.0),
+                                        child: Text(
+                                          data['name'] ?? 'No Name',
+                                          style: GoogleFonts.khmer(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.normal,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(right: 16.0),
+                                        child: Row(
+                                          children: [
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.amber,
+                                              size: 20,
+                                            ),
+                                            SizedBox(width: 4),
+                                            Text(
+                                              ratingDisplay,
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                      ),
-                    );
-                  },
+                          );
+                        },
+                      );
+                    },
+                  ),
                 );
               },
             ),
