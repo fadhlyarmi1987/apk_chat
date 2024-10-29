@@ -34,114 +34,125 @@ class _RegisterFormState extends State<RegisterForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Color.fromARGB(255, 34, 156, 245), // Set warna background
-      padding: EdgeInsets.all(16.0),
-      child: Column(
-        children: <Widget>[
-          Image.asset(
-            'assets/umm_logo_text.png',
-            height: 110.0,
-          ),
-          SizedBox(height: 10.0),
-          Text(
-            'Register',
-            style: GoogleFonts.kodchasan(
-              fontSize: 35,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-          SizedBox(height: 20.0),
-          _buildTextField(_nameController, 'Nama'),
-          SizedBox(height: 10.0),
-          _buildTextField(_divisiController, 'Divisi'),
-          SizedBox(height: 10.0),
-          _buildTextField(
-              _emailController, 'Email', TextInputType.emailAddress),
-          SizedBox(height: 10.0),
-          _buildTextField(
-              _passwordController, 'Password', TextInputType.text, true),
-          SizedBox(height: 10.0),
-          _buildTextField(_confirmPasswordController, 'Confirm Password',
-              TextInputType.text, true),
-          SizedBox(height: 20.0),
-          _buildCheckbox('Saya sebagai karyawan', _isEmployee, (bool? value) {
-            setState(() {
-              _isEmployee = value ?? false;
-              if (_isEmployee) {
-                _isNotEmployee = false;
-              }
-            });
-          }),
-          _buildCheckbox('Saya atasan karyawan', _isNotEmployee, (bool? value) {
-            setState(() {
-              _isNotEmployee = value ?? false;
-              if (_isNotEmployee) {
-                _isEmployee = false;
-              }
-            });
-          }),
-          SizedBox(height: 20.0),
-          Container(
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  spreadRadius: 2,
-                  blurRadius: 5,
-                  offset: Offset(0, 3),
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
+    return SafeArea(
+      child: Container(
+        color: Color.fromARGB(255, 34, 156, 245),
+        padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
+        child: SingleChildScrollView(
+          // Tambahkan scroll agar tampilan tidak terpotong pada layar kecil
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: screenHeight * 0.02),
+              Image.asset(
+                'assets/umm_logo_text.png',
+                height: screenHeight * 0.15, // Dinamis menggunakan tinggi layar
+              ),
+              SizedBox(height: screenHeight * 0.02),
+              Text(
+                'Register',
+                style: GoogleFonts.kodchasan(
+                  fontSize: screenHeight * 0.05,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
-              ],
-              borderRadius: BorderRadius.circular(20.0), // Set radius shadow
-            ),
-            width: 115,
-            height: 35,
-            child: ElevatedButton(
-              onPressed: () {
-                _register();
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
-                shape: RoundedRectangleBorder(
+              ),
+              SizedBox(height: screenHeight * 0.03),
+              _buildTextField(_nameController, 'Nama'),
+              SizedBox(height: screenHeight * 0.015),
+              _buildTextField(_divisiController, 'Divisi'),
+              SizedBox(height: screenHeight * 0.015),
+              _buildTextField(
+                  _emailController, 'Email', TextInputType.emailAddress),
+              SizedBox(height: screenHeight * 0.015),
+              _buildTextField(
+                  _passwordController, 'Password', TextInputType.text, true),
+              SizedBox(height: screenHeight * 0.015),
+              _buildTextField(_confirmPasswordController, 'Confirm Password',
+                  TextInputType.text, true),
+              SizedBox(height: screenHeight * 0.03),
+              _buildCheckbox('Saya sebagai karyawan', _isEmployee,
+                  (bool? value) {
+                setState(() {
+                  _isEmployee = value ?? false;
+                  if (_isEmployee) {
+                    _isNotEmployee = false;
+                  }
+                });
+              }),
+              _buildCheckbox('Saya atasan karyawan', _isNotEmployee,
+                  (bool? value) {
+                setState(() {
+                  _isNotEmployee = value ?? false;
+                  if (_isNotEmployee) {
+                    _isEmployee = false;
+                  }
+                });
+              }),
+              SizedBox(height: screenHeight * 0.03),
+              Container(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
                   borderRadius: BorderRadius.circular(20.0),
                 ),
-              ),
-              child: Text(
-                'KIRIM',
-                style: GoogleFonts.kodchasan(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                width: screenWidth * 0.3,
+                height: screenHeight * 0.05,
+                child: ElevatedButton(
+                  onPressed: () {
+                    _register();
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
+                  child: Text(
+                    'KIRIM',
+                    style: GoogleFonts.kodchasan(
+                      fontSize: screenHeight * 0.02,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ),
-          SizedBox(height: 10.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Sudah punya akun? klik icon di samping!',
-                style: GoogleFonts.kodchasan(
-                  fontSize: 13,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/login');
-                },
-                child: Image.asset(
-                  'assets/right_switch.png',
-                  width: 50.0,
-                  height: 50.0,
-                ),
+              SizedBox(height: screenHeight * 0.02),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Sudah punya akun? klik icon di samping!',
+                    style: GoogleFonts.kodchasan(
+                      fontSize: screenHeight * 0.018,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/login');
+                    },
+                    child: Image.asset(
+                      'assets/right_switch.png',
+                      width: screenWidth * 0.12,
+                      height: screenHeight * 0.08,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }
@@ -228,7 +239,8 @@ class _RegisterFormState extends State<RegisterForm> {
             behavior: SnackBarBehavior.floating,
             backgroundColor:
                 Colors.transparent, // Atur backgroundColor menjadi transparan
-            elevation: 0, // Atur elevation menjadi 0 untuk menghapus bayangan default
+            elevation:
+                0, // Atur elevation menjadi 0 untuk menghapus bayangan default
             content: Container(
               decoration: BoxDecoration(
                 color: Colors.green,
