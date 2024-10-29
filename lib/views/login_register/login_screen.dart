@@ -9,7 +9,8 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 34, 156, 245), // Set full background color
+      backgroundColor:
+          Color.fromARGB(255, 34, 156, 245), // Set full background color
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 34, 156, 245),
         automaticallyImplyLeading: false,
@@ -18,7 +19,6 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
 
 class LoginForm extends StatefulWidget {
   @override
@@ -172,7 +172,113 @@ class _LoginFormState extends State<LoginForm> {
   }
 
   void _login() async {
-    // Implementasi login
+    String email = _emailController.text;
+    String password = _passwordController.text;
+
+    try {
+      final UserCredential userCredential =
+          await _auth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      final User? user = userCredential.user;
+      if (user != null) {
+        // Cek koleksi 'users'
+        DocumentSnapshot userDoc =
+            await _firestore.collection('users').doc(email).get();
+        String collection = 'users';
+        String name = '';
+        String division = '';
+
+        // Jika dokumen tidak ada di 'users', cek di 'bos'
+        if (!userDoc.exists) {
+          userDoc = await _firestore.collection('bos').doc(email).get();
+          if (userDoc.exists) {
+            collection = 'bos';
+          }
+        }
+
+        // Ambil nama pengguna dari Firestore
+        if (userDoc.exists) {
+          name = userDoc['name'] ?? '';
+          division = userDoc['divisi'] ?? '';
+        }
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            behavior: SnackBarBehavior.floating,
+            backgroundColor:
+                Colors.transparent, // Atur backgroundColor menjadi transparan
+            elevation:
+                0, // Atur elevation menjadi 0 untuk menghapus bayangan default
+            content: Container(
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.circular(30), // Atur border radius
+              ),
+              padding: EdgeInsets.symmetric(
+                  horizontal: 24.0, vertical: 12.0), // Padding dalam kontainer
+              child: Center(
+                heightFactor: 1.0,
+                child: Text(
+                  'Login Berhasil, Selamat Datang $name!',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white), // Warna teks menjadi putih
+                ),
+              ),
+            ),
+            duration: Duration(seconds: 3),
+          ),
+        );
+
+        if (collection == 'bos') {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DashboardBosPage(
+                userName: name,
+                email: email,
+                division: division,
+              ),
+            ),
+          );
+        } else {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DashboardPage(
+                  userName: name, email: email, division: division),
+            ),
+          );
+        }
+        print(
+            'Login berhasil: sebagai email: $email, nama $name, divisi $division');
+      } else {
+        print('User null setelah login');
+      }
+    } catch (e) {
+      print('Error saat login: $e');
+      String errorMessage = 'Terjadi kesalahan saat login';
+      if (e is FirebaseAuthException) {
+        errorMessage = e.message ?? 'Terjadi kesalahan saat login';
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          behavior: SnackBarBehavior.floating,
+          content: Center(
+            heightFactor: 1.0,
+            child: Text(
+              'Email / Password Salah!',
+              textAlign: TextAlign.center,
+            ),
+          ),
+          duration: Duration(seconds: 3),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
   }
 
   @override
