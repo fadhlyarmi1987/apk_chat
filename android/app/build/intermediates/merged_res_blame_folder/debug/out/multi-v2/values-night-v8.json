@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.magang3.app-mergeDebugResources-4:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.magang3.app-mergeDebugResources-3:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "/Applications/development/18 Juni/magang3/android/app/src/main/res/values-night/styles.xml",

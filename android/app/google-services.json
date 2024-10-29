@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "775804210080",
-    "project_id": "magang3-fe3d2",
-    "storage_bucket": "magang3-fe3d2.appspot.com"
+    "project_number": "160972595359",
+    "project_id": "apk-chat-59fce",
+    "storage_bucket": "apk-chat-59fce.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:775804210080:android:84dcfe6d04666215e632c5",
+        "mobilesdk_app_id": "1:160972595359:android:ddebbae8019dc8bd18c2aa",
         "android_client_info": {
           "package_name": "com.example.magang3"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBDEC2I4r9tS_XMEFkbzlm1CvAi_WMXAiE"
+          "current_key": "AIzaSyAixhDTq7ywhBnWXYrwxwSSl_IJuC4xml4"
         }
       ],
       "services": {

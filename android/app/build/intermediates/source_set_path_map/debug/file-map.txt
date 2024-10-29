@@ -1,43 +1,42 @@
-com.example.magang3.app-google-services-0 /Applications/development/18 Juni/magang3/android/app/build/generated/res/google-services/debug
-com.example.magang3.app-pngs-1 /Applications/development/18 Juni/magang3/android/app/build/generated/res/pngs/debug
-com.example.magang3.app-resValues-2 /Applications/development/18 Juni/magang3/android/app/build/generated/res/resValues/debug
-com.example.magang3.app-rs-3 /Applications/development/18 Juni/magang3/android/app/build/generated/res/rs/debug
-com.example.magang3.app-mergeDebugResources-4 /Applications/development/18 Juni/magang3/android/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
-com.example.magang3.app-mergeDebugResources-5 /Applications/development/18 Juni/magang3/android/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
-com.example.magang3.app-merged_res-6 /Applications/development/18 Juni/magang3/android/app/build/intermediates/merged_res/debug
-com.example.magang3.app-debug-7 /Applications/development/18 Juni/magang3/android/app/src/debug/res
-com.example.magang3.app-main-8 /Applications/development/18 Juni/magang3/android/app/src/main/res
-com.example.magang3.app-lifecycle-livedata-2.7.0-9 /Users/mac/.gradle/caches/transforms-3/0313b4099446464f98d0df0606c58c95/transformed/lifecycle-livedata-2.7.0/res
-com.example.magang3.app-jetified-credentials-play-services-auth-1.2.0-rc01-10 /Users/mac/.gradle/caches/transforms-3/048357ee7704c4946a4339e2cf257c88/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/res
-com.example.magang3.app-jetified-core-1.0.0-11 /Users/mac/.gradle/caches/transforms-3/052a56087b23de77791a629d260284c0/transformed/jetified-core-1.0.0/res
-com.example.magang3.app-jetified-play-services-base-18.0.1-12 /Users/mac/.gradle/caches/transforms-3/14b322704d4e2bf3df95bc180f2fad1b/transformed/jetified-play-services-base-18.0.1/res
-com.example.magang3.app-jetified-profileinstaller-1.3.1-13 /Users/mac/.gradle/caches/transforms-3/166e5df34c1c015ef6ddeae137513a3f/transformed/jetified-profileinstaller-1.3.1/res
-com.example.magang3.app-jetified-play-services-auth-20.7.0-14 /Users/mac/.gradle/caches/transforms-3/2acc7c50c8452df173d9706a94728a13/transformed/jetified-play-services-auth-20.7.0/res
-com.example.magang3.app-lifecycle-viewmodel-2.7.0-15 /Users/mac/.gradle/caches/transforms-3/2e94595ca22e3aadcdebdc547820608c/transformed/lifecycle-viewmodel-2.7.0/res
-com.example.magang3.app-browser-1.4.0-16 /Users/mac/.gradle/caches/transforms-3/32cea98340e1fb2b9fa61add8980a4ff/transformed/browser-1.4.0/res
-com.example.magang3.app-jetified-lifecycle-livedata-core-ktx-2.7.0-17 /Users/mac/.gradle/caches/transforms-3/455c428e62a6dd75da98c7152f7af462/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/res
-com.example.magang3.app-jetified-activity-1.8.1-18 /Users/mac/.gradle/caches/transforms-3/4b07bb875192e8c29c9b76677237c5c8/transformed/jetified-activity-1.8.1/res
-com.example.magang3.app-jetified-annotation-experimental-1.4.0-19 /Users/mac/.gradle/caches/transforms-3/4d10c72f31024081b56fc5037069e011/transformed/jetified-annotation-experimental-1.4.0/res
-com.example.magang3.app-jetified-startup-runtime-1.1.1-20 /Users/mac/.gradle/caches/transforms-3/4ee1d1c3643bd699aea17aa2adbcb7ee/transformed/jetified-startup-runtime-1.1.1/res
-com.example.magang3.app-jetified-window-java-1.2.0-21 /Users/mac/.gradle/caches/transforms-3/5292c4072ce6d2ab49b0e25db445cdfe/transformed/jetified-window-java-1.2.0/res
-com.example.magang3.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-22 /Users/mac/.gradle/caches/transforms-3/6e7c2231d2ac9b957ecfe9d432e59ed2/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/res
-com.example.magang3.app-core-runtime-2.2.0-23 /Users/mac/.gradle/caches/transforms-3/73778f1c206428361b6eebbb974be913/transformed/core-runtime-2.2.0/res
-com.example.magang3.app-jetified-core-ktx-1.13.1-24 /Users/mac/.gradle/caches/transforms-3/740c93e8e1043856a6b7cb15a7eaa9f0/transformed/jetified-core-ktx-1.13.1/res
-com.example.magang3.app-jetified-play-services-basement-18.3.0-25 /Users/mac/.gradle/caches/transforms-3/7b4881d0d08dada2f4df61a6dcb57279/transformed/jetified-play-services-basement-18.3.0/res
-com.example.magang3.app-lifecycle-runtime-2.7.0-26 /Users/mac/.gradle/caches/transforms-3/98474e5913354eaede53aaa879a4dd8b/transformed/lifecycle-runtime-2.7.0/res
-com.example.magang3.app-jetified-ads-adservices-1.0.0-beta05-27 /Users/mac/.gradle/caches/transforms-3/a61d1d88618575d5a943825a3dedf6dc/transformed/jetified-ads-adservices-1.0.0-beta05/res
-com.example.magang3.app-jetified-savedstate-1.2.1-28 /Users/mac/.gradle/caches/transforms-3/aadceac8ee0316c01a9163bad1a5e0ed/transformed/jetified-savedstate-1.2.1/res
-com.example.magang3.app-fragment-1.7.1-29 /Users/mac/.gradle/caches/transforms-3/c683cde5b1f5377825fe27da54e1b718/transformed/fragment-1.7.1/res
-com.example.magang3.app-jetified-firebase-common-21.0.0-30 /Users/mac/.gradle/caches/transforms-3/cb6bf9b8e2dcc9f49a7d25207a8520f6/transformed/jetified-firebase-common-21.0.0/res
-com.example.magang3.app-lifecycle-livedata-core-2.7.0-31 /Users/mac/.gradle/caches/transforms-3/ce9e6112a0f9c5113844bb49506e7a06/transformed/lifecycle-livedata-core-2.7.0/res
-com.example.magang3.app-jetified-window-1.2.0-32 /Users/mac/.gradle/caches/transforms-3/d47b1192960df52846144d82ac9e1d6f/transformed/jetified-window-1.2.0/res
-com.example.magang3.app-jetified-lifecycle-process-2.7.0-33 /Users/mac/.gradle/caches/transforms-3/d674cd90e13def17f77b3f8010d35e09/transformed/jetified-lifecycle-process-2.7.0/res
-com.example.magang3.app-jetified-tracing-1.2.0-34 /Users/mac/.gradle/caches/transforms-3/e67a2d3f5080e81a9ca4ada76d6846fb/transformed/jetified-tracing-1.2.0/res
-com.example.magang3.app-jetified-play-services-measurement-api-22.0.1-35 /Users/mac/.gradle/caches/transforms-3/ec016376d75a9f0043f99e4c05f3a2e6/transformed/jetified-play-services-measurement-api-22.0.1/res
-com.example.magang3.app-jetified-ads-adservices-java-1.0.0-beta05-36 /Users/mac/.gradle/caches/transforms-3/f01d09dd317e70ab027e72b9ad46bc1e/transformed/jetified-ads-adservices-java-1.0.0-beta05/res
-com.example.magang3.app-jetified-credentials-1.2.0-rc01-37 /Users/mac/.gradle/caches/transforms-3/fa6bede6d23f621cda068d46314ffe31/transformed/jetified-credentials-1.2.0-rc01/res
-com.example.magang3.app-core-1.13.1-38 /Users/mac/.gradle/caches/transforms-3/fac84cd5ecf1ec88a8c98571217c9350/transformed/core-1.13.1/res
-com.example.magang3.app-packaged_res-39 /Users/mac/.pub-cache/hosted/pub.dev/cloud_firestore-5.1.0/android/build/intermediates/packaged_res/debug
-com.example.magang3.app-packaged_res-40 /Users/mac/.pub-cache/hosted/pub.dev/firebase_auth-5.1.2/android/build/intermediates/packaged_res/debug
-com.example.magang3.app-packaged_res-41 /Users/mac/.pub-cache/hosted/pub.dev/firebase_core-3.2.0/android/build/intermediates/packaged_res/debug
-com.example.magang3.app-packaged_res-42 /Users/mac/.pub-cache/hosted/pub.dev/path_provider_android-2.2.6/android/build/intermediates/packaged_res/debug
+com.example.magang3.app-pngs-0 /Applications/development/18 Juni/magang3/android/app/build/generated/res/pngs/debug
+com.example.magang3.app-resValues-1 /Applications/development/18 Juni/magang3/android/app/build/generated/res/resValues/debug
+com.example.magang3.app-rs-2 /Applications/development/18 Juni/magang3/android/app/build/generated/res/rs/debug
+com.example.magang3.app-mergeDebugResources-3 /Applications/development/18 Juni/magang3/android/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.magang3.app-mergeDebugResources-4 /Applications/development/18 Juni/magang3/android/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.magang3.app-merged_res-5 /Applications/development/18 Juni/magang3/android/app/build/intermediates/merged_res/debug
+com.example.magang3.app-debug-6 /Applications/development/18 Juni/magang3/android/app/src/debug/res
+com.example.magang3.app-main-7 /Applications/development/18 Juni/magang3/android/app/src/main/res
+com.example.magang3.app-lifecycle-livedata-core-2.7.0-8 /Users/mac/.gradle/caches/transforms-3/00ccdfdd79bca498620450976bb93d99/transformed/lifecycle-livedata-core-2.7.0/res
+com.example.magang3.app-jetified-play-services-auth-20.7.0-9 /Users/mac/.gradle/caches/transforms-3/01d5c61cc737d31b4b9a8fe37c986195/transformed/jetified-play-services-auth-20.7.0/res
+com.example.magang3.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-10 /Users/mac/.gradle/caches/transforms-3/0fba516c0b215da3cbd2b293bc773e92/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/res
+com.example.magang3.app-jetified-window-java-1.2.0-11 /Users/mac/.gradle/caches/transforms-3/157d8ce0593b2b50ae005dbedf38a43e/transformed/jetified-window-java-1.2.0/res
+com.example.magang3.app-jetified-play-services-measurement-api-22.0.1-12 /Users/mac/.gradle/caches/transforms-3/186b95033b4e5c5467a21005976bcb28/transformed/jetified-play-services-measurement-api-22.0.1/res
+com.example.magang3.app-jetified-credentials-play-services-auth-1.2.0-rc01-13 /Users/mac/.gradle/caches/transforms-3/24c6aeecd6039c142341f8abc15af1fa/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/res
+com.example.magang3.app-fragment-1.7.1-14 /Users/mac/.gradle/caches/transforms-3/289790f48e215a2ac23bb7af57556d78/transformed/fragment-1.7.1/res
+com.example.magang3.app-lifecycle-livedata-2.7.0-15 /Users/mac/.gradle/caches/transforms-3/325f308d6be7eba3247f339ab76bfa9f/transformed/lifecycle-livedata-2.7.0/res
+com.example.magang3.app-core-1.13.1-16 /Users/mac/.gradle/caches/transforms-3/3d5c2f63a860b91cf6ae308022fbe34a/transformed/core-1.13.1/res
+com.example.magang3.app-jetified-play-services-base-18.0.1-17 /Users/mac/.gradle/caches/transforms-3/43f3c42ce05604eb7d4ce8a85098c13a/transformed/jetified-play-services-base-18.0.1/res
+com.example.magang3.app-lifecycle-runtime-2.7.0-18 /Users/mac/.gradle/caches/transforms-3/585544cbffdc2693c2ea7582ef993024/transformed/lifecycle-runtime-2.7.0/res
+com.example.magang3.app-jetified-annotation-experimental-1.4.0-19 /Users/mac/.gradle/caches/transforms-3/6774c0f733259c3c8f00df03297364ef/transformed/jetified-annotation-experimental-1.4.0/res
+com.example.magang3.app-core-runtime-2.2.0-20 /Users/mac/.gradle/caches/transforms-3/67cbc8bade01dcc76faab6ec89319181/transformed/core-runtime-2.2.0/res
+com.example.magang3.app-browser-1.4.0-21 /Users/mac/.gradle/caches/transforms-3/6938b97c75ac6554ea4cff811da56f4c/transformed/browser-1.4.0/res
+com.example.magang3.app-jetified-core-ktx-1.13.1-22 /Users/mac/.gradle/caches/transforms-3/6a754416166da3b4d5634c7f60123442/transformed/jetified-core-ktx-1.13.1/res
+com.example.magang3.app-jetified-startup-runtime-1.1.1-23 /Users/mac/.gradle/caches/transforms-3/76097a67d1c4bfa6560305b2330cfe91/transformed/jetified-startup-runtime-1.1.1/res
+com.example.magang3.app-jetified-ads-adservices-java-1.0.0-beta05-24 /Users/mac/.gradle/caches/transforms-3/89999a43176b8eb3226785784bb76bb2/transformed/jetified-ads-adservices-java-1.0.0-beta05/res
+com.example.magang3.app-jetified-play-services-basement-18.3.0-25 /Users/mac/.gradle/caches/transforms-3/8f3ec40d1a4f86e0db579904428edf5b/transformed/jetified-play-services-basement-18.3.0/res
+com.example.magang3.app-jetified-ads-adservices-1.0.0-beta05-26 /Users/mac/.gradle/caches/transforms-3/901a4edf5e2676fca0ace2ef7ad3f13a/transformed/jetified-ads-adservices-1.0.0-beta05/res
+com.example.magang3.app-jetified-profileinstaller-1.3.1-27 /Users/mac/.gradle/caches/transforms-3/9259b62196028b3e3ee53c1c4ea9dd30/transformed/jetified-profileinstaller-1.3.1/res
+com.example.magang3.app-jetified-firebase-common-21.0.0-28 /Users/mac/.gradle/caches/transforms-3/9481bb146ad34777fe85181da2b82905/transformed/jetified-firebase-common-21.0.0/res
+com.example.magang3.app-jetified-core-1.0.0-29 /Users/mac/.gradle/caches/transforms-3/adc4f0a6ae76731e378a316fd9081ce6/transformed/jetified-core-1.0.0/res
+com.example.magang3.app-jetified-savedstate-1.2.1-30 /Users/mac/.gradle/caches/transforms-3/aeca124cf6e206238105c6d6a450619a/transformed/jetified-savedstate-1.2.1/res
+com.example.magang3.app-lifecycle-viewmodel-2.7.0-31 /Users/mac/.gradle/caches/transforms-3/b1eaea60e2ba10c742c5f0adceb7e98d/transformed/lifecycle-viewmodel-2.7.0/res
+com.example.magang3.app-jetified-window-1.2.0-32 /Users/mac/.gradle/caches/transforms-3/b204f8194609fea8d43af1e0eaae1026/transformed/jetified-window-1.2.0/res
+com.example.magang3.app-jetified-activity-1.8.1-33 /Users/mac/.gradle/caches/transforms-3/b55a353125a62a2d20b78aeeac132fce/transformed/jetified-activity-1.8.1/res
+com.example.magang3.app-jetified-lifecycle-livedata-core-ktx-2.7.0-34 /Users/mac/.gradle/caches/transforms-3/b80747e2d29b9e182e4ffeec904702e6/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/res
+com.example.magang3.app-jetified-credentials-1.2.0-rc01-35 /Users/mac/.gradle/caches/transforms-3/cb21374a9a44efc6709e2c73627f3127/transformed/jetified-credentials-1.2.0-rc01/res
+com.example.magang3.app-jetified-tracing-1.2.0-36 /Users/mac/.gradle/caches/transforms-3/d9bc88eac96d3ba7c7dca1cc90441a74/transformed/jetified-tracing-1.2.0/res
+com.example.magang3.app-jetified-lifecycle-process-2.7.0-37 /Users/mac/.gradle/caches/transforms-3/e6e17c6d13413e5784267ab189ccd311/transformed/jetified-lifecycle-process-2.7.0/res
+com.example.magang3.app-packaged_res-38 /Users/mac/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.2/android/build/intermediates/packaged_res/debug
+com.example.magang3.app-packaged_res-39 /Users/mac/.pub-cache/hosted/pub.dev/firebase_auth-5.3.0/android/build/intermediates/packaged_res/debug
+com.example.magang3.app-packaged_res-40 /Users/mac/.pub-cache/hosted/pub.dev/firebase_core-3.5.0/android/build/intermediates/packaged_res/debug
+com.example.magang3.app-packaged_res-41 /Users/mac/.pub-cache/hosted/pub.dev/path_provider_android-2.2.6/android/build/intermediates/packaged_res/debug
